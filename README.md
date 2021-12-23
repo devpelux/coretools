@@ -64,15 +64,15 @@
 
 This static class contains the following functions:
 
-- `Point GetCursorPos()`
+- `Point GetCursorPos()`  
   Returns the current cursor position on display.
 
 ### SystemUtils
 
-- `FileInfo GetExecutingFile()`
+- `FileInfo GetExecutingFile()`  
   Returns the current application executing file.
 
-- `DirectoryInfo GetExecutingDirectory()`
+- `DirectoryInfo GetExecutingDirectory()`  
   Returns the current application executing directory.
 
 <!-- license -->
@@ -80,7 +80,7 @@ This static class contains the following functions:
 <br><br>
 ### License
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
-Licensed under MIT license.   
+Licensed under MIT license.
 
 [![mit](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/64px-MIT_logo.svg.png)][license]
 
