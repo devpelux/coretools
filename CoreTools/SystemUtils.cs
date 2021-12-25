@@ -18,6 +18,11 @@ namespace CoreTools
         /// Gets the current application executing directory.
         /// </summary>
         /// <returns>Current application executing directory.</returns>
-        public static DirectoryInfo? GetExecutingDirectory() => GetExecutingFile().Directory;
+        /// <exception cref="DirectoryNotFoundException"></exception>
+        public static DirectoryInfo GetExecutingDirectory()
+        {
+            if (GetExecutingFile().Directory is DirectoryInfo dir) return dir;
+            else throw new DirectoryNotFoundException("Unable to get the directory of the current application executable.");
+        }
     }
 }

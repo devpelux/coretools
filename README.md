@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/devpelux/coretools" title="CoreTools">
-    <img width="90px" align="center" alt="CoreTools" src="https://raw.githubusercontent.com/devpelux/coretools/1.0.0/Assets/Icon.png"></img>
+    <img width="90px" align="center" alt="CoreTools" src="https://raw.githubusercontent.com/devpelux/coretools/1.0.1/Assets/Icon.png"></img>
   </a>
 </p>
 <h2 align="center">CoreTools</h2>
@@ -23,12 +23,12 @@
   <a href="https://www.nuget.org/packages/CoreTools" title="CoreTools on NuGet">
     <img alt="Nuget downloads" src="https://img.shields.io/nuget/dt/coretools"></img>
   </a>
-  <a href="https://github.com/devpelux/coretools/blob/1.0.0/LICENSE" title="Licensed under MIT license">
+  <a href="https://github.com/devpelux/coretools/blob/1.0.1/LICENSE" title="Licensed under MIT license">
     <img alt="License" src="https://img.shields.io/github/license/devpelux/coretools"></img>
   </a>
 </p>
 <p align="center">
-  <img alt="Code release" src="https://img.shields.io/badge/code:release-v1.0.0-blue"></img>
+  <img alt="Code release" src="https://img.shields.io/badge/code:release-v1.0.1-blue"></img>
   <img alt="Code status" src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
@@ -77,8 +77,7 @@ This static class contains the following functions:
 
 <!-- license -->
 
-<br><br>
-### License
+## License
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
@@ -86,6 +85,6 @@ Licensed under MIT license.
 
 <!-- links -->
 
-[license]: https://github.com/devpelux/coretools/blob/1.0.0/LICENSE "Licensed under MIT license"
+[license]: https://github.com/devpelux/coretools/blob/1.0.1/LICENSE "Licensed under MIT license"
 [net5]: https://docs.microsoft.com/dotnet ".NET 5"
 [net6]: https://docs.microsoft.com/dotnet ".NET 6"

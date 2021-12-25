@@ -5,7 +5,8 @@
     <Nullable>enable</Nullable>
     <SignAssembly>False</SignAssembly>
     <Authors>Salvatore Peluso</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
     <Description>Lightweight package with some utilities for .NET Core.
 
@@ -15,8 +16,10 @@ Documentation here: https://github.com/devpelux/coretools</Description>
     <RepositoryType>git</RepositoryType>
     <PackageTags>net5 net6 core tools utility</PackageTags>
     <PackageIcon>Icon.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReleaseNotes>Now GetExecutingDirectory never returns null.
+Fixed documentation and readme.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +27,7 @@ Documentation here: https://github.com/devpelux/coretools</Description>
       <Pack>True</Pack>
 	  <PackagePath>\</PackagePath>
 	</None>
-    <None Include="..\README.md">
+    <None Include="..\Assets\NUGET_README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
