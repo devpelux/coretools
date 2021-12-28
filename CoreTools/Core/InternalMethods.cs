@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CoreTools.Core.Services
+namespace CoreTools.Core
 {
     /// <summary>
     /// Internal service methods.

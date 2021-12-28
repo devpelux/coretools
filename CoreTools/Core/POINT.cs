@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace CoreTools.Core.Services
+namespace CoreTools.Core
 {
     [StructLayout(LayoutKind.Sequential)]
     internal struct POINT
