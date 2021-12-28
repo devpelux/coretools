@@ -34,6 +34,53 @@ Returns the current application executing file.
 - `DirectoryInfo GetExecutingDirectory()`  
 Returns the current application executing directory.
 
+### ColorExtensions
+
+This static class provides a set of **Color** extensions:
+
+- `Color Invert()`  
+Invert the **Color** by subtracting every value R, G, B from 255.
+
+### SizeExtensions
+
+This static class provides a set of **Size** extensions:
+
+- `Size Invert()`  
+Invert the **Size** by replacing every value with its negative.
+
+- `Size UniformSize(int dim)`  
+Initializes a new **Size** with uniform dimensions.
+
+### StringExtensions
+
+This static class provides a set of **string** extensions:
+
+- `bool IsDouble()`  
+Check if the **string** is a **double**.
+
+- `bool IsInt()`  
+Check if the **string** is an **int**.
+
+- `bool IsNumeric()`  
+Check if the **string** contains only **numeric** chars.
+
+- `string NormalizeForDouble([bool ignoreFractionalZeros = true])`  
+Normalize the **string** for the type **double**.
+
+  - `ignoreFractionalZeros`: Ignore if there are only zeros as the fractional part to speed up the algorithm.
+
+- `string NormalizeForInt()`  
+Normalize the **string** for the type **int**.
+
+- `string Append(char c)`  
+Append a **char** at the end of the **string**.
+
+- `string Append(string str)`  
+Append a **string** at the end of the **string**.
+
+- `string Reduce(int count)`  
+Cut the **string** by removing a specified number of chars from the end of the **string**.
+
 ## License
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.

@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/github/license/devpelux/coretools"></img>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/code:release-v1.0.1-blue"></img>
+  <img src="https://img.shields.io/badge/code:release-v1.1.0-blue"></img>
   <img src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
@@ -38,17 +38,64 @@
 This static class contains the following functions:
 
 - `Point GetCursorPos()`  
-  Returns the current cursor position on display.
+Returns the current cursor position on display.
 
 ### SystemUtils
 
 This static class contains the following functions:
 
 - `FileInfo GetExecutingFile()`  
-  Returns the current application executing file.
+Returns the current application executing file.
 
 - `DirectoryInfo GetExecutingDirectory()`  
-  Returns the current application executing directory.
+Returns the current application executing directory.
+
+### ColorExtensions
+
+This static class provides a set of **Color** extensions:
+
+- `Color Invert()`  
+Invert the **Color** by subtracting every value R, G, B from 255.
+
+### SizeExtensions
+
+This static class provides a set of **Size** extensions:
+
+- `Size Invert()`  
+Invert the **Size** by replacing every value with its negative.
+
+- `Size UniformSize(int dim)`  
+Initializes a new **Size** with uniform dimensions.
+
+### StringExtensions
+
+This static class provides a set of **string** extensions:
+
+- `bool IsDouble()`  
+Check if the **string** is a **double**.
+
+- `bool IsInt()`  
+Check if the **string** is an **int**.
+
+- `bool IsNumeric()`  
+Check if the **string** contains only **numeric** chars.
+
+- `string NormalizeForDouble([bool ignoreFractionalZeros = true])`  
+Normalize the **string** for the type **double**.
+
+  - `ignoreFractionalZeros`: Ignore if there are only zeros as the fractional part to speed up the algorithm.
+
+- `string NormalizeForInt()`  
+Normalize the **string** for the type **int**.
+
+- `string Append(char c)`  
+Append a **char** at the end of the **string**.
+
+- `string Append(string str)`  
+Append a **string** at the end of the **string**.
+
+- `string Reduce(int count)`  
+Cut the **string** by removing a specified number of chars from the end of the **string**.
 
 <!-- license -->
 

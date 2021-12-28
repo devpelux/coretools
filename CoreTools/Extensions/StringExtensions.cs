@@ -34,7 +34,7 @@ namespace CoreTools.Extensions
         public static bool IsNumeric(this string str) => str.All(char.IsDigit);
 
         /// <summary>
-        /// Normalize the string for the type <see cref="double"/>.
+        /// Normalize the <see cref="string"/> for the type <see cref="double"/>.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to normalize.</param>
         /// <param name="ignoreFractionalZeros">Ignore if there are only zeros as the fractional part to speed up the algorithm.</param>
@@ -64,7 +64,7 @@ namespace CoreTools.Extensions
         }
 
         /// <summary>
-        /// Normalize the string for the type <see cref="int"/>.
+        /// Normalize the <see cref="string"/> for the type <see cref="int"/>.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to normalize.</param>
         /// <returns>The <see cref="string"/> normalized for the type <see cref="int"/>.</returns>
@@ -72,27 +72,27 @@ namespace CoreTools.Extensions
         public static string NormalizeForInt(this string str) => str.IsInt() ? int.Parse(str).ToString() : throw new FormatException($"{str} is not a valid int.");
 
         /// <summary>
-        /// Append a <see cref="char"/> at the end of the string.
+        /// Append a <see cref="char"/> at the end of the <see cref="string"/>.
         /// </summary>
         /// <param name="str">Initial string.</param>
         /// <param name="c"><see cref="char"/> to append.</param>
-        /// <returns>A new string to which was added the <see cref="char"/> specified.</returns>
+        /// <returns>A new <see cref="string"/> to which was added the <see cref="char"/> specified.</returns>
         public static string Append(this string str, char c) => string.Concat(str, c);
 
         /// <summary>
-        /// Append a <see cref="string"/> at the end of the string.
+        /// Append a <see cref="string"/> at the end of the <see cref="string"/>.
         /// </summary>
         /// <param name="str">Initial string.</param>
         /// <param name="str2"><see cref="string"/> to append.</param>
-        /// <returns>A new string to which was added the <see cref="string"/> specified.</returns>
+        /// <returns>A new <see cref="string"/> to which was added the <see cref="string"/> specified.</returns>
         public static string Append(this string str, string str2) => string.Concat(str, str2);
 
         /// <summary>
-        /// Cut the string by a specified length from the end.
+        /// Cut the <see cref="string"/> by removing a specified number of chars from the end of the <see cref="string"/>.
         /// </summary>
         /// <param name="str">Initial string.</param>
-        /// <param name="length">Number of chars to remove from the end of the string.</param>
-        /// <returns>A new string that is equivalent to this string except for the removed characters.</returns>
+        /// <param name="length">Number of chars to remove from the end of the <see cref="string"/>.</param>
+        /// <returns>A new <see cref="string"/> that is equivalent to this <see cref="string"/> except for the removed characters.</returns>
         public static string Reduce(this string str, int length) => length == 0 ? str
             : length > 0 ? length <= str.Length ? str.Remove(str.Length - length)
             : throw new ArgumentOutOfRangeException(nameof(length), "Length must must be less than or equal to length of string.")
