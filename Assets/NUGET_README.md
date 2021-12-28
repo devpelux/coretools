@@ -1,4 +1,4 @@
-![icon](https://raw.githubusercontent.com/devpelux/coretools/1.0.1/Assets/Icon.png)
+![icon](https://raw.githubusercontent.com/devpelux/coretools/1.1.0/Assets/Icon.png)
 
 # CoreTools
 
@@ -85,4 +85,4 @@ Cut the **string** by removing a specified number of chars from the end of the *
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/coretools/main/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.0.1/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.1.0/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.1.0/LICENSE)

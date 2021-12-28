@@ -1,7 +1,7 @@
 <!-- icon -->
 
 <p align="center">
-  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.0.1/Assets/Icon.png"></img>
+  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.1.0/Assets/Icon.png"></img>
 </p>
 <h2 align="center">CoreTools</h2>
 <p align="center">Lightweight package with some utilities for .NET Core.</p>
@@ -103,4 +103,4 @@ Cut the **string** by removing a specified number of chars from the end of the *
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/coretools/main/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.0.1/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.1.0/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.1.0/LICENSE)
