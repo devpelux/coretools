@@ -1,13 +1,18 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue.  
+If you want contribute to this repository, you can make pull requests, or open issues.  
+If you want to ask something, or ask for support, please use the [discussions](https://github.com/devpelux/coretools/discussions) tab, not issues.
 
 Please note that there is a [code of conduct](https://github.com/devpelux/coretools/blob/main/CODE_OF_CONDUCT.md),
-please follow it in all your interactions with the project.  
+please follow it in all your interactions with the project.
 
-## Pull Request Process
+## How to make pull requests correctly
 
-1. Ensure to correctly cleanup the project (remove useless files, cleanup the code).  
-2. Update the [README.md](https://github.com/devpelux/coretools/blob/main/README.md) to describe correctly the project.  
-   Ex. If you added a feature, add it to features list.
-3. Increase the version number of the project to the new version that this Pull Request would represent. (Use [SemVer](http://semver.org/) scheme)  
+1. Fork and clone this repository.
+2. Create a new branch from the branch you want to contribute to, then make commits into that branch.
+```cmd
+> git checkout -b [new_branch]
+> git remote add upstream https://github.com/devpelux/coretools
+```
+4. Open a new pull request from the new branch, don't worry if there are conflicts, will be resolved later.
+5. Describe accurately what you have done, please follow the pull request template.
