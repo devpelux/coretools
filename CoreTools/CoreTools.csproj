@@ -36,4 +36,8 @@ Documentation here: https://github.com/devpelux/coretools</Description>
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
 </Project>
