@@ -30,6 +30,7 @@
 
 [![net5](https://img.shields.io/badge/.NET-v5.0-blue)](https://docs.microsoft.com/dotnet)
 [![net6](https://img.shields.io/badge/.NET-v6.0-blue)](https://docs.microsoft.com/dotnet)
+[![drawing_common](https://img.shields.io/badge/System.Drawing.Common-v6.0.0%2B-blue)](https://www.nuget.org/packages/System.Drawing.Common)
 
 ## Overview
 
