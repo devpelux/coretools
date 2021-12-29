@@ -9,13 +9,13 @@ namespace CoreTools
     public static class SystemUtils
     {
         /// <summary>
-        /// Gets the current application executing file.
+        /// Returns the current application executing file.
         /// </summary>
         /// <returns>Current application executing file.</returns>
         public static FileInfo GetExecutingFile() => new(InternalMethods.GetExecutablePath());
 
         /// <summary>
-        /// Gets the current application executing directory.
+        /// Returns the current application executing directory.
         /// </summary>
         /// <returns>Current application executing directory.</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>

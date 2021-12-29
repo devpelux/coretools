@@ -8,7 +8,7 @@ namespace CoreTools.Extensions
     public static class SizeExtensions
     {
         /// <summary>
-        /// Invert the <see cref="Size"/> by replacing every value with its negative.
+        /// Inverts the <see cref="Size"/> by replacing every value with its negative.
         /// </summary>
         /// <param name="size">Current <see cref="Size"/>.</param>
         /// <returns></returns>

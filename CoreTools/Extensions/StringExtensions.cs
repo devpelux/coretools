@@ -13,28 +13,28 @@ namespace CoreTools.Extensions
 
 
         /// <summary>
-        /// Check if the <see cref="string"/> is a <see cref="double"/>.
+        /// Checks if the <see cref="string"/> is a <see cref="double"/>.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to check.</param>
         /// <returns><see langword="true"/> if the <see cref="string"/> is a <see cref="double"/>, <see langword="false"/> otherwise.</returns>
         public static bool IsDouble(this string str) => double.TryParse(str, out _);
 
         /// <summary>
-        /// Check if the <see cref="string"/> is an <see cref="int"/>.
+        /// Checks if the <see cref="string"/> is an <see cref="int"/>.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to check.</param>
         /// <returns><see langword="true"/> if the <see cref="string"/> is an <see cref="int"/>, <see langword="false"/> otherwise.</returns>
         public static bool IsInt(this string str) => int.TryParse(str, out _);
 
         /// <summary>
-        /// Check if the <see cref="string"/> contains only numeric chars.
+        /// Checks if the <see cref="string"/> contains only numeric chars.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to check.</param>
         /// <returns><see langword="true"/> if the <see cref="string"/> contains only numeric chars, <see langword="false"/> otherwise.</returns>
         public static bool IsNumeric(this string str) => str.All(char.IsDigit);
 
         /// <summary>
-        /// Normalize the <see cref="string"/> for the type <see cref="double"/>.
+        /// Normalizes the <see cref="string"/> for the type <see cref="double"/>.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to normalize.</param>
         /// <param name="ignoreFractionalZeros">Ignore if there are only zeros as the fractional part to speed up the algorithm.</param>
@@ -64,7 +64,7 @@ namespace CoreTools.Extensions
         }
 
         /// <summary>
-        /// Normalize the <see cref="string"/> for the type <see cref="int"/>.
+        /// Normalizes the <see cref="string"/> for the type <see cref="int"/>.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to normalize.</param>
         /// <returns>The <see cref="string"/> normalized for the type <see cref="int"/>.</returns>
@@ -72,7 +72,7 @@ namespace CoreTools.Extensions
         public static string NormalizeForInt(this string str) => str.IsInt() ? int.Parse(str).ToString() : throw new FormatException($"{str} is not a valid int.");
 
         /// <summary>
-        /// Append a <see cref="char"/> at the end of the <see cref="string"/>.
+        /// Appends a <see cref="char"/> at the end of the <see cref="string"/>.
         /// </summary>
         /// <param name="str">Initial string.</param>
         /// <param name="c"><see cref="char"/> to append.</param>
@@ -80,7 +80,7 @@ namespace CoreTools.Extensions
         public static string Append(this string str, char c) => string.Concat(str, c);
 
         /// <summary>
-        /// Append a <see cref="string"/> at the end of the <see cref="string"/>.
+        /// Appends a <see cref="string"/> at the end of the <see cref="string"/>.
         /// </summary>
         /// <param name="str">Initial string.</param>
         /// <param name="str2"><see cref="string"/> to append.</param>
@@ -88,14 +88,14 @@ namespace CoreTools.Extensions
         public static string Append(this string str, string str2) => string.Concat(str, str2);
 
         /// <summary>
-        /// Cut the <see cref="string"/> by removing a specified number of chars from the end of the <see cref="string"/>.
+        /// Cuts the <see cref="string"/> by removing a specified number of chars from the end of the <see cref="string"/>.
         /// </summary>
         /// <param name="str">Initial string.</param>
-        /// <param name="length">Number of chars to remove from the end of the <see cref="string"/>.</param>
+        /// <param name="count">Number of chars to remove from the end of the <see cref="string"/>.</param>
         /// <returns>A new <see cref="string"/> that is equivalent to this <see cref="string"/> except for the removed characters.</returns>
-        public static string Reduce(this string str, int length) => length == 0 ? str
-            : length > 0 ? length <= str.Length ? str.Remove(str.Length - length)
-            : throw new ArgumentOutOfRangeException(nameof(length), "Length must must be less than or equal to length of string.")
-            : throw new ArgumentOutOfRangeException(nameof(length), "Length cannot be less than zero.");
+        public static string Reduce(this string str, int count) => count == 0 ? str
+            : count > 0 ? count <= str.Length ? str.Remove(str.Length - count)
+            : throw new ArgumentOutOfRangeException(nameof(count), "Length must must be less than or equal to length of string.")
+            : throw new ArgumentOutOfRangeException(nameof(count), "Length cannot be less than zero.");
     }
 }

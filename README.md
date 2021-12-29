@@ -40,6 +40,40 @@ This static class contains the following functions:
 - `Point GetCursorPos()`  
 Returns the current cursor position on display.
 
+### GDIUtils
+
+This static class contains the following functions:
+
+- `Color GetPixelColor(Point pos, [bool takeScreenshotWhenPossible = false])`  
+Returns the color of the pixel at a specified position.
+
+  - `pos`: Position of the pixel from to get the color.
+  - `takeScreenshotWhenPossible`: Take a screenshot when possible to get the pixel color
+    (this may be slower and is supported only in Windows).
+
+- `Color GetPixelColorAtCursorPos([bool takeScreenshotWhenPossible = false])`  
+Returns the color of the pixel at the current cursor position on display.
+
+  - `takeScreenshotWhenPossible`: Take a screenshot when possible to get the pixel color
+    (this may be slower and is supported only in Windows). 
+
+- `Bitmap CaptureScreenshot(Point pos, Size size)`  
+Captures a screenshot from a specified position, with a specified size.
+
+  - `pos`: Top-left corner of the screenshot.
+  - `size`: Size of the screenshot.
+
+- `Bitmap CaptureScreenshotAtCursorPos(Size size, Size offset)`  
+Captures a screenshot from the current cursor position on display, with a specified size, and offset.
+
+  - `size`: Size of the screenshot.
+  - `offset`: Offset of the screenshot.
+
+- `Bitmap CaptureScreenshotAtCursorPos(Size size)`  
+Captures a screenshot from the current cursor position on display, with a specified size.
+
+  - `size`: Size of the screenshot.
+
 ### SystemUtils
 
 This static class contains the following functions:
@@ -55,47 +89,55 @@ Returns the current application executing directory.
 This static class provides a set of **Color** extensions:
 
 - `Color Invert()`  
-Invert the **Color** by subtracting every value R, G, B from 255.
+Inverts the **Color** by subtracting every value R, G, B from 255.
 
 ### SizeExtensions
 
 This static class provides a set of **Size** extensions:
 
 - `Size Invert()`  
-Invert the **Size** by replacing every value with its negative.
+Inverts the **Size** by replacing every value with its negative.
 
 - `Size UniformSize(int dim)`  
 Initializes a new **Size** with uniform dimensions.
+
+  - `dim`: Dimensions.
 
 ### StringExtensions
 
 This static class provides a set of **string** extensions:
 
 - `bool IsDouble()`  
-Check if the **string** is a **double**.
+Checks if the **string** is a **double**.
 
 - `bool IsInt()`  
-Check if the **string** is an **int**.
+Checks if the **string** is an **int**.
 
 - `bool IsNumeric()`  
-Check if the **string** contains only **numeric** chars.
+Checks if the **string** contains only **numeric** chars.
 
 - `string NormalizeForDouble([bool ignoreFractionalZeros = true])`  
-Normalize the **string** for the type **double**.
+Normalizes the **string** for the type **double**.
 
   - `ignoreFractionalZeros`: Ignore if there are only zeros as the fractional part to speed up the algorithm.
 
 - `string NormalizeForInt()`  
-Normalize the **string** for the type **int**.
+Normalizes the **string** for the type **int**.
 
 - `string Append(char c)`  
-Append a **char** at the end of the **string**.
+Appends a **char** at the end of the **string**.
+
+  - `c`: **char** to append.
 
 - `string Append(string str)`  
-Append a **string** at the end of the **string**.
+Appends a **string** at the end of the **string**.
+
+  - `str`: **string** to append.
 
 - `string Reduce(int count)`  
-Cut the **string** by removing a specified number of chars from the end of the **string**.
+Cuts the **string** by removing a specified number of chars from the end of the **string**.
+
+  - `count`: Number of chars to remove from the end of the **string**.
 
 <!-- license -->
 

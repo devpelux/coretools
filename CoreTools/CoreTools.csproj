@@ -14,7 +14,7 @@ Documentation here: https://github.com/devpelux/coretools</Description>
     <PackageProjectUrl>https://github.com/devpelux/coretools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devpelux/coretools</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>net5 net6 core tools utility</PackageTags>
+    <PackageTags>utility tools core dotnet net5 net6</PackageTags>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

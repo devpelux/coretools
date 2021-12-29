@@ -8,7 +8,7 @@ namespace CoreTools.Extensions
     public static class ColorExtensions
     {
         /// <summary>
-        /// Invert the color by subtracting every value R, G, B from 255.
+        /// Inverts the color by subtracting every value R, G, B from 255.
         /// </summary>
         /// <param name="color">Colore.</param>
         /// <returns>Inverted color.</returns>
