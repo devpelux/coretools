@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/github/license/devpelux/coretools"></img>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/code:release-v1.1.0-blue"></img>
+  <img src="https://img.shields.io/badge/code:release-v1.1.1-blue"></img>
   <img src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
