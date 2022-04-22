@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <SignAssembly>False</SignAssembly>
     <Authors>Salvatore Peluso</Authors>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
     <Description>Lightweight package with some utilities for .NET Core.
@@ -18,7 +18,7 @@ Documentation here: https://github.com/devpelux/coretools</Description>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageReleaseNotes>Added GDIUtils, ColorExtensions, SizeExtensions, StringExtensions.</PackageReleaseNotes>
+    <PackageReleaseNotes>Improved docs.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

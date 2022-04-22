@@ -11,7 +11,9 @@ namespace CoreTools.Extensions
         /// Inverts the <see cref="Size"/> by replacing every value with its negative.
         /// </summary>
         /// <param name="size">Current <see cref="Size"/>.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// The current <see cref="Size"/> with the opposite values for <b>width</b> and <b>height</b>.
+        /// </returns>
         public static Size Invert(this Size size) => new(-size.Width, -size.Height);
 
         /// <summary>
