@@ -1,9 +1,9 @@
 <!-- icon -->
 
 <p align="center">
-  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.1.0/Assets/Icon.png"></img>
+  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.1.1/Assets/Icon.png"></img>
 </p>
-<h2 align="center">CoreTools</h2>
+<h1 align="center">CoreTools</h1>
 <p align="center">Lightweight package with some utilities for .NET Core.</p>
 
 <!-- badges -->
@@ -20,130 +20,131 @@
   <img src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
+
 <!-- description -->
 
-## Availability
-
+# Availability
 **NUGET:** https://www.nuget.org/packages/CoreTools
 
-## Dependencies
 
+# Dependencies
 [![net5](https://img.shields.io/badge/.NET-v5.0-blue)](https://docs.microsoft.com/dotnet)
 [![net6](https://img.shields.io/badge/.NET-v6.0-blue)](https://docs.microsoft.com/dotnet)
 [![drawing_common](https://img.shields.io/badge/System.Drawing.Common-v6.0.0%2B-blue)](https://www.nuget.org/packages/System.Drawing.Common)
 
-## Overview
 
-### GraphicUtils
+# Content
+Content of the package:
 
+
+## GraphicUtils
 This static class contains the following functions:
 
-- `Point GetCursorPos()`  
-Returns the current cursor position on display.
+#### `Point GetCursorPos()`
+*Returns the current cursor position on display.*
 
-### GDIUtils
 
+## GDIUtils
 This static class contains the following functions:
 
-- `Color GetPixelColor(Point pos, [bool takeScreenshotWhenPossible = false])`  
-Returns the color of the pixel at a specified position.
+#### `Color GetPixelColor(Point pos, [bool takeScreenshotWhenPossible = false])`
+*Returns the color of the pixel at a specified position.*  
+Parameters:  
+**pos**: Position of the pixel from to get the color.  
+**takeScreenshotWhenPossible**: Take a screenshot when possible to get the pixel color (this may be slower and is supported only in Windows).
 
-  - `pos`: Position of the pixel from to get the color.
-  - `takeScreenshotWhenPossible`: Take a screenshot when possible to get the pixel color
-    (this may be slower and is supported only in Windows).
+#### `Color GetPixelColorAtCursorPos([bool takeScreenshotWhenPossible = false])`
+*Returns the color of the pixel at the current cursor position on display.*  
+Parameters:  
+**takeScreenshotWhenPossible**: Take a screenshot when possible to get the pixel color (this may be slower and is supported only in Windows). 
 
-- `Color GetPixelColorAtCursorPos([bool takeScreenshotWhenPossible = false])`  
-Returns the color of the pixel at the current cursor position on display.
+#### `Bitmap CaptureScreenshot(Point pos, Size size)`
+*Captures a screenshot from a specified position, with a specified size.*  
+Parameters:  
+**pos**: Top-left corner of the screenshot.  
+**size**: Size of the screenshot.
 
-  - `takeScreenshotWhenPossible`: Take a screenshot when possible to get the pixel color
-    (this may be slower and is supported only in Windows). 
+#### `Bitmap CaptureScreenshotAtCursorPos(Size size, Size offset)`
+*Captures a screenshot from the current cursor position on display, with a specified size, and offset.*  
+Parameters:  
+**size**: Size of the screenshot.  
+**offset**: Offset of the screenshot.
 
-- `Bitmap CaptureScreenshot(Point pos, Size size)`  
-Captures a screenshot from a specified position, with a specified size.
+#### `Bitmap CaptureScreenshotAtCursorPos(Size size)`
+*Captures a screenshot from the current cursor position on display, with a specified size.*  
+Parameters:  
+**size**: Size of the screenshot.
 
-  - `pos`: Top-left corner of the screenshot.
-  - `size`: Size of the screenshot.
 
-- `Bitmap CaptureScreenshotAtCursorPos(Size size, Size offset)`  
-Captures a screenshot from the current cursor position on display, with a specified size, and offset.
-
-  - `size`: Size of the screenshot.
-  - `offset`: Offset of the screenshot.
-
-- `Bitmap CaptureScreenshotAtCursorPos(Size size)`  
-Captures a screenshot from the current cursor position on display, with a specified size.
-
-  - `size`: Size of the screenshot.
-
-### SystemUtils
-
+## SystemUtils
 This static class contains the following functions:
 
-- `FileInfo GetExecutingFile()`  
-Returns the current application executing file.
+#### `FileInfo GetExecutingFile()`
+*Returns the current application executing file.*
 
-- `DirectoryInfo GetExecutingDirectory()`  
-Returns the current application executing directory.
+#### `DirectoryInfo GetExecutingDirectory()`
+*Returns the current application executing directory.*
 
-### ColorExtensions
 
-This static class provides a set of **Color** extensions:
+## ColorExtensions
+This static class provides a set of Color extensions:
 
-- `Color Invert()`  
-Inverts the **Color** by subtracting every value R, G, B from 255.
+#### `Color Invert()`
+*Inverts the Color by subtracting every value R, G, B from 255.*
 
-### SizeExtensions
 
-This static class provides a set of **Size** extensions:
+## SizeExtensions
+This static class provides a set of Size extensions:
 
-- `Size Invert()`  
-Inverts the **Size** by replacing every value with its negative.
+#### `Size Invert()`
+*Inverts the Size by replacing every value with its negative.*
 
-- `Size UniformSize(int dim)`  
-Initializes a new **Size** with uniform dimensions.
+#### `Size UniformSize(int dim)`
+*Initializes a new Size with uniform dimensions.*  
+Parameters:  
+**dim**: Dimensions.
 
-  - `dim`: Dimensions.
 
-### StringExtensions
+## StringExtensions
+This static class provides a set of string extensions:
 
-This static class provides a set of **string** extensions:
+#### `bool IsDouble()`
+*Checks if the string is a double.*
 
-- `bool IsDouble()`  
-Checks if the **string** is a **double**.
+#### `bool IsInt()`
+*Checks if the string is an int.*
 
-- `bool IsInt()`  
-Checks if the **string** is an **int**.
+#### `bool IsNumeric()`
+*Checks if the string contains only numeric chars.*
 
-- `bool IsNumeric()`  
-Checks if the **string** contains only **numeric** chars.
+#### `string NormalizeForDouble([bool ignoreFractionalZeros = true])`
+*Normalizes the string for the type double.*  
+Parameters:  
+**ignoreFractionalZeros**: Ignore if there are only zeros as the fractional part to speed up the algorithm.
 
-- `string NormalizeForDouble([bool ignoreFractionalZeros = true])`  
-Normalizes the **string** for the type **double**.
+#### `string NormalizeForInt()`
+*Normalizes the string for the type int.*
 
-  - `ignoreFractionalZeros`: Ignore if there are only zeros as the fractional part to speed up the algorithm.
+#### `string Append(char c)`
+*Appends a char at the end of the string.*  
+Parameters:  
+**c**: char to append.
 
-- `string NormalizeForInt()`  
-Normalizes the **string** for the type **int**.
+#### `string Append(string str)`
+*Appends a string at the end of the string.*  
+Parameters:  
+**str**: string to append.
 
-- `string Append(char c)`  
-Appends a **char** at the end of the **string**.
+#### `string Reduce(int count)`
+*Cuts the string by removing a specified number of chars from the end of the string.*  
+Parameters:  
+**count**: Number of chars to remove from the end of the string.
 
-  - `c`: **char** to append.
-
-- `string Append(string str)`  
-Appends a **string** at the end of the **string**.
-
-  - `str`: **string** to append.
-
-- `string Reduce(int count)`  
-Cuts the **string** by removing a specified number of chars from the end of the **string**.
-
-  - `count`: Number of chars to remove from the end of the **string**.
 
 <!-- license -->
 
-## License
+# License
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.1.0/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.1.0/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.1.1/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.1.1/LICENSE)
