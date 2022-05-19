@@ -1,16 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0; net6.0</TargetFrameworks>
+    <TargetFrameworks>net6.0; net5.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <SignAssembly>False</SignAssembly>
-    <Authors>Salvatore Peluso</Authors>
+    <Authors>devpelux</Authors>
     <Version>1.1.1.1</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
-    <Description>Lightweight package with some utilities for .NET Core.
+    <Description>
+Lightweight package with some utilities for .NET Core.
 
-Documentation here: https://github.com/devpelux/coretools</Description>
+Documentation: https://github.com/devpelux/coretools
+    </Description>
     <PackageProjectUrl>https://github.com/devpelux/coretools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devpelux/coretools</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
