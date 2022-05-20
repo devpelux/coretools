@@ -1,7 +1,7 @@
 <!-- icon -->
 
 <p align="center">
-  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.2.0/Assets/Icon.png"></img>
+  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.2.0/Assets/Icon.svg"></img>
 </p>
 <h1 align="center">CoreTools</h1>
 <p align="center">Lightweight package with some utilities for .NET Core.</p>

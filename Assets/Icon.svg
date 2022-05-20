@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" data-name="Livello 1" version="1.1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style>.cls-1{fill:none;fill-rule:evenodd;}</style>
+  <linearGradient id="linearGradient5733" x1="34.393" x2="174.39" y1="28.521" y2="168.52" gradientTransform="translate(23.607 29.479)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#540060" offset="0"/>
+   <stop stop-color="#a100b8" offset="1"/>
+  </linearGradient>
+ </defs>
+ <rect x="40.5" y="40.5" width="176" height="176" rx="34" ry="34" fill="#001c34" stroke-width="0"/>
+ <g stroke-linecap="round" stroke-width="16">
+  <path class="cls-1" d="m83 16v50" stroke="#570065"/>
+  <path class="cls-1" d="m113 16v50" stroke="#5f006c"/>
+  <path class="cls-1" d="m143 16v50" stroke="#670076"/>
+  <path class="cls-1" d="m173 16v50" stroke="#710081"/>
+  <path class="cls-1" d="m83 190v50" stroke="#820095"/>
+  <path class="cls-1" d="m113 190v50" stroke="#8c00a0"/>
+  <path class="cls-1" d="m143 190v50" stroke="#9500ab"/>
+  <path class="cls-1" d="m173 190v50" stroke="#9c01b3"/>
+  <path class="cls-1" d="m190 173h50" stroke="#9c00b2"/>
+  <path class="cls-1" d="m190 143h50" stroke="#9500aa"/>
+  <path class="cls-1" d="m190 113h50" stroke="#8c00a0"/>
+  <path class="cls-1" d="m190 83h50" stroke="#820094"/>
+  <path class="cls-1" d="m16 173h45.138" stroke="#710082"/>
+  <path class="cls-1" d="m16 143h45.138" stroke="#670077"/>
+  <path class="cls-1" d="m16 113h45.138" stroke="#5f006c"/>
+  <path class="cls-1" d="m16 83h45.138" stroke="#580164"/>
+ </g>
+ <rect x="58" y="58" width="140" height="140" rx="22" ry="22" fill="url(#linearGradient5733)" stroke-width="0"/>
+</svg>
