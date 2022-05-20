@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Linq;
 
 namespace CoreTools.Extensions
@@ -11,6 +12,7 @@ namespace CoreTools.Extensions
         private static readonly char[] doubleSeparators = new char[] { '.', ',' };
         private const char NON_ZERO_DIGIT = '1';
 
+        #region Numeric checkers
 
         /// <summary>
         /// Checks if the <see cref="string"/> is a <see cref="double"/>.
@@ -32,6 +34,10 @@ namespace CoreTools.Extensions
         /// <param name="str">The <see cref="string"/> to check.</param>
         /// <returns><see langword="true"/> if the <see cref="string"/> contains only numeric chars, <see langword="false"/> otherwise.</returns>
         public static bool IsNumeric(this string str) => str.All(char.IsDigit);
+
+        #endregion
+
+        #region Numeric normalizers
 
         /// <summary>
         /// Normalizes the <see cref="string"/> for the type <see cref="double"/>.
@@ -71,6 +77,10 @@ namespace CoreTools.Extensions
         /// <exception cref="FormatException"/>
         public static string NormalizeForInt(this string str) => str.IsInt() ? int.Parse(str).ToString() : throw new FormatException($"{str} is not a valid int.");
 
+        #endregion
+
+        #region Manipulators
+
         /// <summary>
         /// Appends a <see cref="char"/> at the end of the <see cref="string"/>.
         /// </summary>
@@ -93,9 +103,65 @@ namespace CoreTools.Extensions
         /// <param name="str">Initial string.</param>
         /// <param name="count">Number of chars to remove from the end of the <see cref="string"/>.</param>
         /// <returns>A new <see cref="string"/> that is equivalent to this <see cref="string"/> except for the removed characters.</returns>
+        /// <exception cref="ArgumentOutOfRangeException"/>
         public static string Reduce(this string str, int count) => count == 0 ? str
             : count > 0 ? count <= str.Length ? str.Remove(str.Length - count)
             : throw new ArgumentOutOfRangeException(nameof(count), "Length must must be less than or equal to length of string.")
             : throw new ArgumentOutOfRangeException(nameof(count), "Length cannot be less than zero.");
+
+        /// <summary>
+        /// Returns a <see cref="string"/> by taking only the specified number of chars from the start of the <see cref="string"/>.
+        /// </summary>
+        /// <param name="str">Initial string.</param>
+        /// <param name="count">Number of chars to take from the start of the <see cref="string"/>.</param>
+        /// <returns>
+        /// A new <see cref="string"/> that contains only the specified number of chars from the start of the original <see cref="string"/>.<br/>
+        /// If the original <see cref="string"/> is shorter, returns only the original <see cref="string"/>.
+        /// </returns>
+        public static string TakeStr(this string str, int count) => str.Length <= count ? str : str[..count];
+
+        #endregion
+
+        #region Converters
+
+        /// <summary>
+        /// Converts the string to an <see cref="int"/>.<br/>
+        /// In case of errors returns a specified default value.
+        /// </summary>
+        /// <param name="str">The <see cref="string"/> to convert.</param>
+        /// <param name="defaultValue">The default value used in case of errors.</param>
+        /// <returns>An <see cref="int"/> resulting from the conversion, or the default value in case of errors.</returns>
+        public static int ToInt(this string str, int defaultValue = 0) => str.IsInt() ? int.Parse(str) : defaultValue;
+
+        /// <summary>
+        /// Converts the string to a <see cref="double"/>.<br/>
+        /// In case of errors returns a specified default value.
+        /// </summary>
+        /// <param name="str">The <see cref="string"/> to convert.</param>
+        /// <param name="defaultValue">The default value used in case of errors.</param>
+        /// <returns>A <see cref="double"/> resulting from the conversion, or the default value in case of errors.</returns>
+        public static double ToDouble(this string str, double defaultValue = 0) => str.IsDouble() ? double.Parse(str) : defaultValue;
+
+        /// <summary>
+        /// Converts the string to the specific type using a <see cref="TypeDescriptor"/> converter.<br/>
+        /// In case of errors returns a specified default value.
+        /// </summary>
+        /// <typeparam name="T">The type of the result.</typeparam>
+        /// <param name="str">The <see cref="string"/> to convert.</param>
+        /// <param name="defaultValue">The default value used in case of errors.</param>
+        /// <returns>Object of the type specified resulting from the conversion, or the default value in case of errors.</returns>
+        public static T? ParseTo<T>(this string str, T? defaultValue = default)
+        {
+            try
+            {
+                return (T?)TypeDescriptor.GetConverter(typeof(T)).ConvertFromString(str);
+            }
+            catch
+            {
+                return defaultValue;
+            }
+        }
+
+        #endregion
     }
 }

@@ -1,4 +1,4 @@
-![icon](https://raw.githubusercontent.com/devpelux/coretools/1.1.1/Assets/Icon.png)
+![icon](https://raw.githubusercontent.com/devpelux/coretools/1.2.0/Assets/Icon.png)
 
 
 # CoreTools
@@ -124,9 +124,29 @@ Parameters:
 Parameters:  
 **count**: Number of chars to remove from the end of the string.
 
+#### `string TakeStr(int count)`
+*Returns a string by taking only the specified number of chars from the start of the string.*  
+Parameters:  
+**count**: Number of chars to take from the start of the string.
+
+#### `string ToInt(int defaultValue)`
+*Converts the string to an int. In case of errors returns a specified default value.*  
+Parameters:  
+**defaultValue**: The default value used in case of errors.
+
+#### `string ToDouble(double defaultValue)`
+*Converts the string to a double. In case of errors returns a specified default value.*  
+Parameters:  
+**defaultValue**: The default value used in case of errors.
+
+#### `T? ParseTo<T>(T? defaultValue)`
+*Converts the string to the specific type using a TypeDescriptor converter. In case of errors returns a specified default value.*  
+Parameters:  
+**defaultValue**: The default value used in case of errors.
+
 
 # License
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.1.1/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.1.1/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.2.0/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.2.0/LICENSE)

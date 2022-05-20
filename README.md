@@ -1,7 +1,7 @@
 <!-- icon -->
 
 <p align="center">
-  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.1.1/Assets/Icon.png"></img>
+  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/coretools/1.2.0/Assets/Icon.png"></img>
 </p>
 <h1 align="center">CoreTools</h1>
 <p align="center">Lightweight package with some utilities for .NET Core.</p>
@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/github/license/devpelux/coretools"></img>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/code:release-v1.1.1-blue"></img>
+  <img src="https://img.shields.io/badge/code:release-v1.2.0-blue"></img>
   <img src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
@@ -140,6 +140,26 @@ Parameters:
 Parameters:  
 **count**: Number of chars to remove from the end of the string.
 
+#### `string TakeStr(int count)`
+*Returns a string by taking only the specified number of chars from the start of the string.*  
+Parameters:  
+**count**: Number of chars to take from the start of the string.
+
+#### `string ToInt(int defaultValue)`
+*Converts the string to an int. In case of errors returns a specified default value.*  
+Parameters:  
+**defaultValue**: The default value used in case of errors.
+
+#### `string ToDouble(double defaultValue)`
+*Converts the string to a double. In case of errors returns a specified default value.*  
+Parameters:  
+**defaultValue**: The default value used in case of errors.
+
+#### `T? ParseTo<T>(T? defaultValue)`
+*Converts the string to the specific type using a TypeDescriptor converter. In case of errors returns a specified default value.*  
+Parameters:  
+**defaultValue**: The default value used in case of errors.
+
 
 <!-- license -->
 
@@ -147,4 +167,4 @@ Parameters:
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.1.1/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.1.1/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/coretools/1.2.0/Assets/Mit.png)](https://github.com/devpelux/coretools/blob/1.2.0/LICENSE)

@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <SignAssembly>False</SignAssembly>
     <Authors>devpelux</Authors>
-    <Version>1.1.1.1</Version>
+    <Version>1.2.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
     <Description>
@@ -21,8 +21,8 @@ Documentation: https://github.com/devpelux/coretools
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReleaseNotes>
+		Added TakeStr, ToInt, ToDouble, and ParseTo string extensions.
 		Improved docs.
-		Updated readme.
 	</PackageReleaseNotes>
   </PropertyGroup>
 
